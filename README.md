@@ -4,7 +4,7 @@
 Font Dashboard is a Genearl Plugin which opens a window with Progress Bar showing Layer Colors for all Masters.  
 Available from `Window > Font Dashboard`
 
-<img src="https://github.com/HugoJourdan/Color-Workflow/blob/main/Font%20Dashboard/FontDashboard-preview.jpg?raw=true" width="800" />
+<img src="https://github.com/HugoJourdan/Font-Dashboard/blob/main/FontDashboard-preview.jpg" width="800" />
 
 It requires a `color.txt` file stored in either `~/Library/Application Support/Glyphs 3/info` or the same directory as the current Glyphs source file. Preference is given to the latter allowing for the sharing of the `color.txt` file with glyphs source files to retain labelling information between project contributors. 
 
