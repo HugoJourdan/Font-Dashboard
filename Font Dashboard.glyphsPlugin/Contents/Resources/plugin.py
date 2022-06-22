@@ -25,12 +25,8 @@ from GlyphsApp.UI import *
 from vanilla import*
 
 import AppKit
-from vanilla import FloatingWindow, Button, TextBox, Box
+from vanilla import FloatingWindow, Button, TextBox, Box, HelpButton
 from AppKit import NSColor, NSMakeRect, NSColor, NSBezierPath
-
-
-
-
 
 
 
@@ -51,7 +47,7 @@ class FontDash(GeneralPlugin):
 		
 		self.font = Glyphs.font
 		self.barWidth = 800
-		self.height = 46*len(self.font.masters)+90
+		self.height = 46*len(self.font.masters)+100
 		self.barHeight = 18
 		self.barWidthDic = {}
 		self.colorKeys = {
@@ -68,9 +64,13 @@ class FontDash(GeneralPlugin):
 						"10":(0.75, 0.75, 0.75, 1),
 						"11":(0.25, 0.25, 0.25, 0.5)
 						}
-		self.w = FloatingWindow((self.barWidth+30,self.height), "Font Dashboard")
+		self.w = FloatingWindow((self.barWidth+30,self.height), "Font Dashboard, by Hugo Jourdan [@hugojourdan]")
 		self.w.frame = Group((0, 0, self.barWidth+30,self.height))
 		self.w.frame.swatches = CanvasView((0, 0, 0, 0), self)
+
+		
+		self.w.frame.helpButton = HelpButton((self.barWidth+5, self.height-25, 20, 20), callback=self.openURL)
+		self.w.frame.helpButton.getNSButton().setToolTip_("Opens Font Dashboard GitHub in your web browser.")
 		self.w.center()
 		self.w.open()
 
@@ -202,6 +202,14 @@ class FontDash(GeneralPlugin):
 		self.colourLabels = switch
 		return self.colourLabels
 
+	@objc.python_method
+	def openURL( self, sender ):
+		
+		URL = "https://github.com/HugoJourdan/Font-Dashboard"
+		
+		import webbrowser
+		webbrowser.open( URL )
+	
 
 	@objc.python_method
 	def __file__(self):
