@@ -37,3 +37,7 @@ lightBlue=Light blue
 purple=Purple
 lightGreen=Light green
 ```
+
+# TIPS
+
+To  quickly export the dashboard, press ` ⇧ + ⌘ + 4 ` , then Space to screenshot Font Dashboard window.
