@@ -162,7 +162,7 @@ class FontDash(GeneralPlugin):
 		keyFile = None
 		try:
 			thisDirPath = os.path.dirname(self.font.filepath)
-			localKeyFile = thisDirPath + '/color.txt'
+			localKeyFile = thisDirPath + '/colorNames.txt'
 			if os.path.exists(localKeyFile):
 				keyFile = localKeyFile
 		except:
@@ -173,7 +173,7 @@ class FontDash(GeneralPlugin):
 			os.mkdir(dirInfo)
 
 		if keyFile is None:
-			keyFile = os.path.expanduser('~/Library/Application Support/Glyphs 3/info/color.txt')
+			keyFile = os.path.expanduser('~/Library/Application Support/Glyphs 3/info/colorNames.txt')
 
 		if not os.path.exists(keyFile):
 			f = open(keyFile,"w+")
@@ -182,7 +182,7 @@ class FontDash(GeneralPlugin):
 			pass
 		return keyFile
 
-	# Build Dic from color.txt content
+	# Build Dic from colorNames.txt content
 	@objc.python_method
 	def mapKeys(self, keyFile):
 
