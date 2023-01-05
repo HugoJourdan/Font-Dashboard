@@ -1,0 +1,2 @@
+glyphsLib==6.1.0
+glyphspkg==0.1.7
