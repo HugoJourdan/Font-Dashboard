@@ -1,6 +1,5 @@
 # Font Dashboard
 
-<<<<<<< HEAD
 <img alt="Font Dahsboard screenshot" src="https://user-images.githubusercontent.com/76793951/210555511-04db9b29-86c0-4d28-b63e-6afbdf07444d.png">
 
 Font Dashboard is a python script which generate markdown reporter showing Layer/Glyph Color Labels `.glyphs` or `.glyphspackage` file.
@@ -58,16 +57,3 @@ At each new report generated, if Color Labels data changed, you will see for eac
 This section lists all the glyphs whose colour label has been changed.
 
 <img alt="Font Dashboard screenshot" src="https://user-images.githubusercontent.com/76793951/210559895-78471cba-3545-426e-9bea-5de4f3366315.png">
-=======
-<img width="1502" alt="Font Dahsboard screenshot" src="https://user-images.githubusercontent.com/76793951/210370324-9446ff05-c8fc-483c-9a6c-2d62f4decf47.png">
-
-Font Dashboard is a Python script, which is an Markdown Reporter to track changes and to have an overview of a project.
-It use Layer Color and/or Glyph Color to generate an HTML page
-
-# How to use it
-Run `Generate Color Dashboard Markdown.py` in your terminal with a Glyphs File path as argument
-
-In your terminal
-write python, drag and drop `Generate Color Dashboard Markdown.py` and a glyph File, then press Enter
-
->>>>>>> 4ce864102ed697ab4b860497a6bf08a7446b3468
